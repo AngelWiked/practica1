@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+	<!--link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.4.5.min.css"-->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function (){
+			//alert("jquery funcionando........");
+			$("#btnsumar").click(function (){
+				var n1=parseInt($("#num1").val());
+				var n2=parseInt($("#num2").val());
+				var suma=n1+n2;
+				$("#resultado").val(suma);
+				//alert("El valor de la suma es " + suma);
+			});
+		});
+	</script>
+	<style type="text/css">
+		p{
+			text-align: center;
+		}
+		
+		#Principal{
+			background-color: green;
+		}
+		#Contacto{
+			background-color: blue;
+		}
+
+		.colorMorado{
+			color: purple;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div data-role="page" id="Principal" data-theme="b">
+		<div data-role="header">
+		<a href="#" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+			<p class="colorMorado">Principal</p>
+			<a href="#Contacto" class="ui-btn ui-icon-search ui-btn-icon-right">Buscar</a> <!--al inicio con la palabra contacto sele puede cambiar y poner una url y nos direcciona a donde uno quiere-->
+		</div>	
+		<div data-role="content">
+
+		<a href="#Contacto" data-role="button" data-transition="slide"> Contacto slide</a>
+
+		<a href="#Contacto" data-role="button" data-transition="slideup">Contacto slideup</a>
+
+		<a href="#Contacto" data-role="button" data-transition="slidedown">Contacto slidedown</a>
+
+		<a href="#Contacto" data-role="button" data-transition="flip">Contacto flip</a>
+
+		<a href="#Contacto" data-role="button" data-transition="fade">Contacto fade</a>
+
+		<a href="#Contacto" data-role="button" data-transition="pop">Contacto pop</a>
+
+		<a href="#Contacto" data-role="button" data-transition="flow">Contacto flow</a>
+
+		<a href="#Contacto" data-role="button" data-transition="slidefade">Contacto slidefade</a>
+
+		<a href="#Suma" data-role="button" data-transition="flip"> Calcular suma</a>
+
+
+			
+		</div>
+		<div data-role="footer">
+			<p><a href="http:www.facebook.com" class="ui-btn ui-icon-plus ui-btn-icon-left">Facebook</a>
+			<a href="http:www.Twitter.com" class="ui-btn ui-icon-plus ui-btn-icon-left">Twitter
+			<a href="http:www.Instgram.com" class="ui-btn ui-icon-plus ui-btn-icon-left">Instgram</a>
+			</p>
+		</div>
+	</div>
+	<div data-role="page" id="Contacto">
+		<div data-role="header">
+		<a href="#Principal" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+			<p class="colorMorado">Contacto</p>
+		</div>	
+		<div data-role="content">
+			<p>OLAF LOPEZ BONILLA</p>
+			<p>i.s.c angelrkr@hotmail.com</p>
+		</div>
+		<div data-role="footer">
+			<p>pie de aplicación</p>
+		</div>
+	</div>	
+		<div data-role="page" id="Suma" data-theme="b">
+		<div data-role="header">
+		<div data-role="navbar">
+		<ul>
+			<li> <a href="#Principal" class="ui-btn ui-icon-home ui-btn-icon-top">Home</a></li>
+			<li> <a href="#Contacto" class="ui-btn ui-icon-plus ui-btn-icon-top">Contacto</a></li>
+			<li> <a href="http://www.google.com" class="ui-btn ui-icon-search ui-btn-icon-top">Buscar</a></li>
+		</ul>
+		<div data-role="content">
+		<input type="text" id="num1" placeholder="Escribe un numero">
+
+		<input type="text" id="num2" placeholder="Escribe un segundo numero">
+
+		<input type="text" id="resultado" placeholder="Resultado">
+
+		<input type="button" id="btnsumar" value="Calcular suma" >
+		</div>
+		<div data-role="footer">
+			<p>pie de aplicación</p>
+		</div>
+	</div>	
+</body>
+</html>
